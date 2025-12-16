@@ -1,6 +1,6 @@
 package com.example.demo.entity;
-import jakarta.persistence.Entity;
-
+import jakarta.persistence.*;
+@Id
 public class Student {
    
     private int regno;
@@ -39,7 +39,7 @@ public class Student {
         this.cgpa = cgpa;
     }
     public Student() {
-        
+
     }
     
 
