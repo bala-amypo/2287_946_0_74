@@ -12,7 +12,7 @@ import com.example.demo.entity.Student;
 import com.example.demo.service.StudentService;
 
 @RestController
-public class StudentController {
+public class StudentController{
 
     @Autowired
     private StudentService ssr;
