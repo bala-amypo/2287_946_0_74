@@ -1,23 +1,27 @@
 package com.example.demo.controller;
-import com.example.demo.entity.Student;
-import com.example.demo.service.Stuserve;
+
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import com.example.demo.entity.Student;
+import com.example.demo.service.Stuserve;
+
 @RestController
+@RequestMapping("/students")
 public class Studentcontrol {
 
     @Autowired
-    Stuserve ser;
+    private Stuserve ser;
 
     @PostMapping("/add")
-    public Student createData(@RequestBody Student stu) {  
+    public Student createData(@RequestBody Student stu) {
         return ser.createData(stu);
     }
-    @GetMapping
-    public List<Integer> fetch(){
-        return ser.fetch();
-        
-    }
 
+    @GetMapping("/all")
+    public List<Student> fetch() {
+        return ser.fetch();
+    }
 }
