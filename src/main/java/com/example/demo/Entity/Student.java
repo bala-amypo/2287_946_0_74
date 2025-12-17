@@ -44,7 +44,7 @@ public class Student {
         this.cgpa = cgpa;
     }
     public Student(int regno, String name, int marks, double cgpa) {
-        this.regno = regno;
+        //this.regno = regno;
         this.name = name;
         this.marks = marks;
         this.cgpa = cgpa;

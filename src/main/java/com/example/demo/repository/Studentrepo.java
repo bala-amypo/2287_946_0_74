@@ -8,7 +8,6 @@ import com.example.demo.entity.Student;
 @Repository
 public interface Studentrepo extends JpaRepository<Student,Integer> {
 
-    Student save(Student stu);
-
+    
 
 }
