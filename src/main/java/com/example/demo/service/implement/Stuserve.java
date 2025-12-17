@@ -9,15 +9,8 @@ import repository.Sturepository;
 @Service
 public interface Stuserve {
 
-    @Autowired
-    Sturepository repo;
-    public Student createData (Student stu)
-    {
-        return repo.save(stu);
-    }
-    public List<Integer> fetch() {
-        return repo.findAll();
-    }
+  Student createData(Studeny stu);
+  List<Student>fetch();
 
 
 }
