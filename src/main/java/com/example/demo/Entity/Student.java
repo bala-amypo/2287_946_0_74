@@ -6,7 +6,7 @@ package com.example.demo.entity;
 // import jakarta.persistence.GenerationType;
 // import jakarta.persistence.Id;
 // import jakarta.persistence.Table;
-import jakarta.persistence.*;;
+import jakarta.persistence.*;
 @Entity
 // @Table(name = "newtablename")
 public class Student {
