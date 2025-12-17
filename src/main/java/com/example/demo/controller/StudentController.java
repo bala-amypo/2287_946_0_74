@@ -26,4 +26,6 @@ public class StudentController{
     public List<Student> fetchRecord() {
         return ssr.fetchRecord();
         }
+    
+    @GetMapping("/fetchdata")
 }
