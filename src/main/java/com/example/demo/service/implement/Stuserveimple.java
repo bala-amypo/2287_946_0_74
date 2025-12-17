@@ -18,10 +18,11 @@ StudentRepository repo;
 //create (or) Insert data
 public Student createData(Student stu) {
 return repo.save(stu);
-
+}
 I
 
 @Override
 // Fetch all records
 public List<Student> fetchRecord() {
 return repo.findAll();
+}
