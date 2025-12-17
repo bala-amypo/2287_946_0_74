@@ -3,9 +3,8 @@ package com.example.demo.service;
 import java.util.List;
 import com.example.demo.entity.Student;
 
-public interface Stuserve {
+public interface StudentService {
 
     Student createData(Student stu);
-
-    List<Student> fetch();
+    List<Student> fetchRecord();
 }

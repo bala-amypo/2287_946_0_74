@@ -3,25 +3,27 @@ package com.example.demo.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.Student;
-import com.example.demo.service.Stuserve;
+import com.example.demo.service.StudentService;
 
 @RestController
-@RequestMapping("/students")
-public class Studentcontroller{
+public class StudentController {
 
     @Autowired
-    private Stuserve ser;
+    private StudentService ssr;
 
-    @PostMapping("/add")
+    @PostMapping("/adddata")
     public Student createData(@RequestBody Student stu) {
-        return ser.createData(stu);
+        return ssr.createData(stu);
     }
 
-    @GetMapping("/all")
-    public List<Student> fetch() {
-        return ser.fetch();
-    }
+    @GetMapping("/getdata")
+    public List<Student> fetchRecord() {
+        return ssr.fetchRecord();
+        }
 }

@@ -1,56 +1,60 @@
 package com.example.demo.entity;
 
-// import jakarta.persistence.Column;
-// import jakarta.persistence.Entity;
-// import jakarta.persistence.GeneratedValue;
-// import jakarta.persistence.GenerationType;
-// import jakarta.persistence.Id;
-// import jakarta.persistence.Table;
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+
 @Entity
-// @Table(name = "newtablename")
 public class Student {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int regno;
-    // @Column(name = "newcolumnname")
+    private int id;
+
     private String name;
-    private int marks;
-    private double cgpa;
-        
-    public int getRegno() {
-        return regno;
+    private String email;
+    private float cgpa;
+
+    public Student() {
     }
-    public void setRegno(int regno) {
-        this.regno = regno;
+
+    public Student(int id, String name, String email, float cgpa) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.cgpa = cgpa;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
-    public int getMarks() {
-        return marks;
+
+    public String getEmail() {
+        return email;
     }
-    public void setMarks(int marks) {
-        this.marks = marks;
+
+    public void setEmail(String email) {
+        this.email = email;
     }
-    public double getCgpa() {
+
+    public float getCgpa() {
         return cgpa;
     }
-    public void setCgpa(double cgpa) {
-        this.cgpa = cgpa;
-    }
-    public Student(int regno, String name, int marks, double cgpa) {
-        //this.regno = regno;
-        this.name = name;
-        this.marks = marks;
-        this.cgpa = cgpa;
-    }
-    public Student() {
-    }
-    
 
+    public void setCgpa(float cgpa) {
+        this.cgpa = cgpa;
+    }
 }
