@@ -1,23 +1,27 @@
-package com.example.demo.service;
-// import java.util.HashMap;
 import java.util.List;
-// import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+
 import com.example.demo.entity.Student;
-import repository.Sturepository;
+import com.example.demo.repository. StudentRepository;
+import com.example.demo.service.StudentService;
+
+import org.springframework.stereotype.Service;
+
 @Service
-public interface Stuserve {
+public class StudentServiceImpl implements StudentService {
 
-    @Autowired
-    Sturepository repo;
-    public Student createData (Student stu)
-    {
-        return repo.save(stu);
-    }
-    public List<Integer> fetch() {
-        return repo.findAll();
-    }
+@Autowired
+StudentRepository repo;
 
+@Override
+//create (or) Insert data
+public Student createData(Student stu) {
+return repo.save(stu);
 
-}
+I
+
+@Override
+// Fetch all records
+public List<Student> fetchRecord() {
+return repo.findAll();
