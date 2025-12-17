@@ -10,7 +10,7 @@ import com.example.demo.service.Stuserve;
 
 @RestController
 @RequestMapping("/students")
-public class Studentcontrol(){
+public class Studentcontroller{
 
     @Autowired
     private Stuserve ser;
